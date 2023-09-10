@@ -33,6 +33,8 @@
     "earlycon=uart,mmio32,0x01c28000"
   ];
 
+  mobile.kernel.structuredConfig = [ (helpers: with helpers; { KEYBOARD_PINEPHONE = yes; }) ];
+
   # Serial console on ttyS0, using the serial headphone adapter.
   mobile.boot.serialConsole = "ttyS0,115200";
 
